@@ -1,7 +1,7 @@
 import { CheckCircle, Award, BookOpen, Heart } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import psychologistImage from '@/assets/psychologist-portrait.jpg';
+import psychologistImage from '@/assets/angelica-frente-camera.jpeg';
 
 const About = () => {
   const qualifications = [
@@ -42,14 +42,27 @@ const About = () => {
                   Sobre <span className="font-semibold">Mim</span>
                 </h1>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                  Sou uma psicóloga dedicada ao cuidado da saúde mental, com formação sólida 
-                  e uma paixão genuína por ajudar pessoas a encontrarem seu equilíbrio emocional 
-                  e realizarem seu potencial.
+                Sou Angélica Apolinário, psicóloga clínica (formada pela Universidade Anhembi Morumbi – 2017), 
+                especialista em Psicologia Hospitalar e pós-graduanda em Terapia Cognitivo-Comportamental e Psicologia Clínica Baseada em Evidências.
                 </p>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  Minha jornada na psicologia começou com a convicção de que todos merecem 
-                  viver uma vida plena e significativa. Ao longo dos anos, tenho me especializado 
-                  em diferentes abordagens terapêuticas para oferecer o melhor cuidado possível.
+                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                Atuo com psicoterapia individual online, atendendo adultos de 18 a 59 anos, 
+                com foco em questões como transtornos de ansiedade, depressão, TEPT, TOC, insônia, procrastinação, dificuldades de comunicação, entre outros. 
+                Meu trabalho é fundamentado na Prática Baseada em Evidências, sempre buscando o que há de mais eficaz e atualizado no cuidado à saúde mental.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                Tenho experiência em atendimentos breves e focais, adquirida ao longo de dois anos como prestadora de serviços em Telepsicologia (rede Dasa), 
+                onde tratei diversas demandas emocionais e elaborei documentos psicológicos. 
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                Sou apaixonada por estudar e me atualizar constantemente. Acredito que o psicólogo precisa estar em movimento contínuo de aprendizado. Por isso, 
+                sigo me aprofundando em temas como TCC, psicopatologia, neurociências, habilidades sociais, regulação emocional e muito mais. 
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                Desde a adolescência, carrego o desejo genuíno de acolher, escutar e ajudar as pessoas. Hoje, isso se reflete em um trabalho ético, humano e comprometido com resultados reais.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                A psicoterapia não é uma sentença, é um caminho possível de transformação. E se você me der um voto de confiança, eu posso caminhar com você rumo a uma vida mais equilibrada, saudável e significativa.
                 </p>
               </div>
               <div className="flex justify-center">
@@ -62,7 +75,7 @@ const About = () => {
                   <div className="absolute -bottom-6 -right-6 bg-sage text-primary-foreground p-4 rounded-xl shadow-lg">
                     <div className="text-center">
                       <div className="text-2xl font-bold">CRP</div>
-                      <div className="text-sm">XX/XXXXX</div>
+                      <div className="text-sm">06/146248</div>
                     </div>
                   </div>
                 </div>
@@ -79,13 +92,17 @@ const About = () => {
             <h2 className="text-3xl md:text-4xl font-light text-sage mb-8">
               Minha <span className="font-semibold">Missão</span>
             </h2>
-            <p className="text-xl text-muted-foreground leading-relaxed mb-12">
-              Acredito que cada pessoa possui recursos internos para superar desafios e crescer. 
-              Meu papel é facilitar esse processo, oferecendo um espaço seguro, acolhedor e 
-              livre de julgamentos onde você possa se conhecer melhor e desenvolver ferramentas 
-              para uma vida mais equilibrada e satisfatória.
+            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+            Minha missão é cuidar da saúde mental com seriedade, sensibilidade e profundidade — oferecendo um espaço seguro, 
+            ético e humano, onde cada pessoa possa ser ouvida com respeito e olhar clínico atento.  
             </p>
-            
+            <p className="text-xl text-muted-foreground leading-relaxed mb-6">
+            Acredito que o sofrimento não define ninguém. Por isso, trabalho para que meus pacientes encontrem clareza, equilíbrio e propósito em suas jornadas, 
+            por meio de uma psicoterapia baseada em evidências, atualizada, acolhedora e transformadora.
+            </p>
+            <p className="text-xl text-muted-foreground leading-relaxed mb-24">
+            Meu compromisso é caminhar ao lado de quem me procura, unindo conhecimento, escuta e cuidado, para que cada passo rumo à mudança seja possível, consciente e verdadeiro.
+            </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-sage-lighter rounded-full flex items-center justify-center mx-auto mb-4">

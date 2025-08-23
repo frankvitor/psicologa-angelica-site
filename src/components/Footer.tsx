@@ -9,12 +9,16 @@ const Footer = () => {
           {/* Logo & Description */}
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-primary-foreground rounded-full flex items-center justify-center">
-                <span className="text-sage font-semibold text-lg">P</span>
-              </div>
+             <div className="w-20 h-20 justify-center overflow-hidden">
+                  <img 
+                    src="/src/assets/logo redondo angelica.png" 
+                    alt="Logo Angélica Carvalho" 
+                    className="w-full h-full object-cover"
+                  />
+            </div>
               <div>
-                <h3 className="text-lg font-semibold">Psicóloga</h3>
-                <p className="text-sm text-sage-lighter">Cuidado & Acolhimento</p>
+                <h3 className="text-lg font-semibold">Angélica Carvalho</h3>
+                <p className="text-sm text-sage-lighter">Psicóloga</p>
               </div>
             </div>
             <p className="text-sm text-sage-lighter leading-relaxed max-w-md">
@@ -56,11 +60,11 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-2">
                 <Phone size={16} className="text-sage-lighter" />
-                <span className="text-sm text-sage-lighter">(11) 99999-9999</span>
+                <span className="text-sm text-sage-lighter">(11) 91507-4650</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail size={16} className="text-sage-lighter" />
-                <span className="text-sm text-sage-lighter">contato@psicologa.com</span>
+                <span className="text-sm text-sage-lighter">psico.aacarvalho@outlook.com</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin size={16} className="text-sage-lighter" />
@@ -72,13 +76,14 @@ const Footer = () => {
             <div className="mt-6">
               <h5 className="font-medium mb-3">Redes Sociais</h5>
               <div className="flex space-x-3">
-                <a href="#" className="text-sage-lighter hover:text-primary-foreground transition-colors">
+                <a href="https://www.instagram.com/angelicarvalhopsi?utm_source=qr&igsh=N3RrYWlpYWx4ZXRz" 
+                        target="_blank" rel="noopener noreferrer" 
+                        className="text-sage-lighter hover:text-primary-foreground transition-colors">
                   <Instagram size={20} />
                 </a>
-                <a href="#" className="text-sage-lighter hover:text-primary-foreground transition-colors">
-                  <Facebook size={20} />
-                </a>
-                <a href="#" className="text-sage-lighter hover:text-primary-foreground transition-colors">
+                <a href="https://www.linkedin.com/in/ang%C3%A9lica-apolin%C3%A1rio-de-carvalho-52847169" 
+                        target="_blank" rel="noopener noreferrer"
+                        className="text-sage-lighter hover:text-primary-foreground transition-colors">
                   <Linkedin size={20} />
                 </a>
               </div>
@@ -88,7 +93,7 @@ const Footer = () => {
 
         <div className="border-t border-sage-lighter mt-8 pt-6 text-center">
           <p className="text-sm text-sage-lighter">
-            © 2024 Psicóloga. Todos os direitos reservados. | CRP: XX/XXXXX
+            © 2025 Psicóloga Angélica Carvalho. Todos os direitos reservados. | CRP: 06/146248
           </p>
         </div>
       </div>

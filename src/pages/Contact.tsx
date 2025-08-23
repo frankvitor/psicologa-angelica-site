@@ -38,20 +38,20 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Telefone",
-      content: "(11) 99999-9999",
+      content: "(11) 91507-4650",
       action: "tel:+5511999999999"
     },
     {
       icon: Mail,
       title: "E-mail",
-      content: "contato@psicologa.com",
+      content: "psico.aacarvalho@outlook.com",
       action: "mailto:contato@psicologa.com"
     },
     {
       icon: MessageCircle,
       title: "WhatsApp",
       content: "Fale comigo agora",
-      action: "https://wa.me/5511999999999"
+      action: "https://w.app/angelicacarvalho"
     },
     {
       icon: MapPin,

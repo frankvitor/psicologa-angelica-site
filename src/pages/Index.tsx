@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Heart, Users, BookOpen, Calendar, Star, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import heroImage from '@/assets/hero-therapy-room.jpg';
+import heroImage from '@/assets/psychologist-portrait.jpeg';
 
 const Index = () => {
   const services = [
@@ -49,19 +49,19 @@ const Index = () => {
         
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
           <h1 className="text-4xl md:text-6xl font-light mb-6 leading-tight">
-            Cuidado Psicológico
+            Conhecimento que liberta
             <br />
-            <span className="font-semibold">Humanizado & Acolhedor</span>
+            <span className="font-semibold">Acolhimento que transforma</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto font-light">
-            Oferecendo suporte emocional especializado para o seu bem-estar e desenvolvimento pessoal
+            Saúde mental com profundidade, verdade e propósito 
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-white text-sage hover:bg-beige">
               <Calendar className="mr-2" size={20} />
               Agendar Consulta
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-sage">
+            <Button size="lg" className="border-white text-white hover:bg-white hover:text-sage">
               <ArrowRight className="mr-2" size={20} />
               Conheça Meu Trabalho
             </Button>
@@ -227,6 +227,7 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
+      {/*}
       <section className="py-20 bg-sage text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-light mb-6">
@@ -248,6 +249,7 @@ const Index = () => {
           </div>
         </div>
       </section>
+      */}
     </div>
   );
 };

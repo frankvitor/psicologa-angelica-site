@@ -23,12 +23,16 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-sage rounded-full flex items-center justify-center">
-              <span className="text-primary-foreground font-semibold text-lg">P</span>
+            <div className="w-14 h-14 justify-center overflow-hidden">
+              <img 
+                src="/src/assets/logoAngelica.jpg" 
+                alt="Logo Angélica Carvalho" 
+                className="w-full h-full object-cover"
+              />
             </div>
             <div className="hidden sm:block">
-              <h1 className="text-xl font-semibold text-foreground">Psicóloga</h1>
-              <p className="text-sm text-sage-light">Cuidado & Acolhimento</p>
+              <h1 className="text-xl font-semibold text-foreground">Angélica Carvalho</h1>
+              <p className="text-sm text-sage-light">Psicóloga</p>
             </div>
           </Link>
 
