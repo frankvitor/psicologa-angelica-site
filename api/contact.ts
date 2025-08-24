@@ -16,9 +16,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     const resend = new Resend(process.env.RESEND_API_KEY);
 
-    console.log("RESEND RESULT:", resend); 
-
-    const { data, error } = await resend.emails.send({
+    const response = await resend.emails.send({
       from: process.env.MAIL_FROM!, // ex: "angelicacarvalho@psicoangelicacarvalho.com.br>"
       to: process.env.MAIL_TO!,     // ex: "psico.aacarvalho@outlook.com"
       subject: assunto ? `Contato: ${assunto}` : `Novo contato de ${nome}`,
@@ -34,10 +32,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       `,
     });
 
-    console.log("RESEND OK id:", data?.id);
+    console.log("RESEND RAW:", JSON.stringify(response));
+
     return res.status(200).json({ ok: true });
   } catch (err) {
-    console.error("EMAIL ERROR:", err?.message || err);
     console.error(err);
     return res.status(500).json({ error: 'Erro ao enviar e-mail.' });
   }
