@@ -39,7 +39,7 @@ const Contact = () => {
       icon: Phone,
       title: "Telefone",
       content: "(11) 91507-4650",
-      action: "tel:+5511999999999"
+      action: "tel:+5511915074650"
     },
     {
       icon: Mail,
