@@ -23,11 +23,11 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-14 h-14 justify-center overflow-hidden">
+            <div className="w-14 h-14 flex justify-center items-center overflow-hidden rounded-full bg-white">
               <img 
-                src="/src/assets/logoAngelica.jpg" 
+                src="/logoAngelica.jpg" 
                 alt="Logo Angélica Carvalho" 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
               />
             </div>
             <div className="hidden sm:block">

@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Heart, Users, BookOpen, Calendar, Star, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import heroImage from '@/assets/psychologist-portrait.jpeg';
+import heroImage from '/psychologist-portrait.jpeg';
 
 const Index = () => {
   const services = [

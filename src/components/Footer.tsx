@@ -9,12 +9,12 @@ const Footer = () => {
           {/* Logo & Description */}
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-             <div className="w-20 h-20 justify-center overflow-hidden">
-                  <img 
-                    src="/src/assets/logo redondo angelica.png" 
-                    alt="Logo Angélica Carvalho" 
-                    className="w-full h-full object-cover"
-                  />
+             <div className="w-14 h-14 flex justify-center items-center overflow-hidden rounded-full bg-white">
+              <img 
+                src="/logoAngelica.jpg" 
+                alt="Logo Angélica Carvalho" 
+                className="w-full h-full object-contain"
+              />
             </div>
               <div>
                 <h3 className="text-lg font-semibold">Angélica Carvalho</h3>

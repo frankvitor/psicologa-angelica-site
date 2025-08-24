@@ -1,7 +1,7 @@
 import { CheckCircle, Award, BookOpen, Heart } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import psychologistImage from '@/assets/angelica-frente-camera.jpeg';
+import psychologistImage from '/angelica-frente-camera.jpeg';
 
 const About = () => {
   const qualifications = [
