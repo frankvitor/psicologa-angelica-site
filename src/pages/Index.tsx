@@ -25,13 +25,16 @@ const Index = () => {
 
   const testimonials = [
     {
-      name: "Maria Silva",
-      text: "Profissional excepcional que me ajudou a superar momentos difíceis com muito acolhimento.",
+      name: "",
+      text: "Excelente profissional, com atendimento humanizado e comprometido. " +
+            "Sempre me deixou confortável nas sessões, transmitindo tranquilidade e calma." +
+            "Ajudou-me a controlar minhas emoções e pensamentos, a desenvolver melhor o autocontrole e a " +
+            "abrir minha mente para diversos assuntos.",
       rating: 5
     },
     {
-      name: "João Santos", 
-      text: "Terapia transformadora! Recomendo para quem busca autoconhecimento e crescimento pessoal.",
+      name: "", 
+      text:  "A terapia foi fundamental para enfrentar momentos muito difíceis e aliviar sofrimentos que eu carregava. Aprendi a olhar a vida por outros ângulos, a me questionar e a não ficar preso a visões distorcidas sobre mim mesmo. Sou profundamente grato por todo o apoio recebido e por todo o aprendizado que levarei para a vida. Considero-a uma profissional extremamente capacitada, atenciosa, acolhedora e que também sabe incentivar o paciente a encontrar forças para superar os desafios e se libertar do sofrimento.",
       rating: 5
     }
   ];

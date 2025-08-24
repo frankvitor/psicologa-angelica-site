@@ -11,7 +11,7 @@ const Footer = () => {
             <div className="flex items-center space-x-2 mb-4">
              <div className="w-14 h-14 flex justify-center items-center overflow-hidden rounded-full bg-white">
               <img 
-                src="/logoAngelica.jpg" 
+                src="/logoLetraPreta.jpg" 
                 alt="Logo Angélica Carvalho" 
                 className="w-full h-full object-contain"
               />
