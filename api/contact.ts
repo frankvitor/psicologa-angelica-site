@@ -16,6 +16,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     const resend = new Resend(process.env.RESEND_API_KEY);
 
+    console.log("RESEND RESULT:", resend); 
+
     await resend.emails.send({
       from: process.env.MAIL_FROM!, // ex: "angelicacarvalho@psicoangelicacarvalho.com.br>"
       to: process.env.MAIL_TO!,     // ex: "psico.aacarvalho@outlook.com"
