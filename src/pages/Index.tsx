@@ -94,10 +94,10 @@ const Index = () => {
                 <div className="text-3xl font-bold text-sage mb-2">200+</div>
                 <div className="text-sm text-muted-foreground">Pessoas Atendidas</div>
               </div>
-              <div className="text-center">
+              {/*<div className="text-center">
                 <div className="text-3xl font-bold text-sage mb-2">98%</div>
                 <div className="text-sm text-muted-foreground">Satisfação dos Pacientes</div>
-              </div>
+              </div>*/}
             </div>
             <Link to="/sobre">
               <Button variant="outline" className="border-sage text-sage hover:bg-sage hover:text-white">

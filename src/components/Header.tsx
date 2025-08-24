@@ -52,10 +52,11 @@ const Header = () => {
           </nav>
 
           {/* CTA Button - Desktop */}
-          <Button className="hidden md:inline-flex" size="sm">
-            Agendar Consulta
-          </Button>
-
+          <Link to="/contato">
+            <Button className="hidden md:inline-flex" size="sm">
+              Agendar Consulta
+            </Button>
+          </Link>
           {/* Mobile Menu Button */}
           <button
             className="md:hidden p-2 rounded-md hover:bg-secondary"
@@ -83,9 +84,11 @@ const Header = () => {
                   {item.label}
                 </Link>
               ))}
-              <Button className="mt-3" size="sm" onClick={() => setIsMenuOpen(false)}>
-                Agendar Consulta
-              </Button>
+              <Link to="/contato" >
+                <Button className="mt-3" size="sm" onClick={() => setIsMenuOpen(false)}>
+                  Agendar Consulta
+                </Button>
+              </Link>
             </div>
           </nav>
         )}
