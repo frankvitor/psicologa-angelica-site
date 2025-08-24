@@ -15,50 +15,64 @@ const Contact = () => {
     subject: '',
     message: ''
   });
+  const [submitting, setSubmitting] = useState(false); // <- loading
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // envia para /api/contact (Vercel)
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Aqui você implementaria o envio do formulário
-    toast({
-      title: "Mensagem enviada!",
-      description: "Entrarei em contato em breve. Obrigado!",
-    });
-    setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
+    if (submitting) return;
+    setSubmitting(true);
+
+    try {
+      // honeypot (campo invisível)
+      const formEl = e.currentTarget;
+      const company = (new FormData(formEl).get('company') as string) || '';
+
+      const payload = {
+        // mapeamento para o backend
+        nome: formData.name,
+        email: formData.email,
+        telefone: formData.phone,
+        assunto: formData.subject,
+        mensagem: formData.message,
+        company, // honeypot
+      };
+
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+
+      if (!res.ok) throw new Error('Falha no envio');
+
+      toast({
+        title: 'Mensagem enviada!',
+        description: 'Obrigado! Retornarei em breve.',
+      });
+
+      setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
+    } catch (err) {
+      toast({
+        title: 'Não foi possível enviar',
+        description: 'Tente novamente em instantes.',
+        variant: 'destructive',
+      });
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+    setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
   const contactInfo = [
-    {
-      icon: Phone,
-      title: "Telefone",
-      content: "(11) 91507-4650",
-      action: "tel:+5511915074650"
-    },
-    {
-      icon: Mail,
-      title: "E-mail",
-      content: "psico.aacarvalho@outlook.com",
-      action: "mailto:contato@psicologa.com"
-    },
-    {
-      icon: MessageCircle,
-      title: "WhatsApp",
-      content: "Fale comigo agora",
-      action: "https://w.app/angelicacarvalho"
-    },
-    {
-      icon: MapPin,
-      title: "Localização",
-      content: "São Paulo, SP",
-      action: "#"
-    }
+    { icon: Phone, title: 'Telefone', content: '(11) 91507-4650', action: 'tel:+5511915074650' },
+    { icon: Mail, title: 'E-mail', content: 'psico.aacarvalho@outlook.com', action: 'mailto:psico.aacarvalho@outlook.com' },
+    { icon: MessageCircle, title: 'WhatsApp', content: 'Fale comigo agora', action: 'https://w.app/angelicacarvalho' },
+    { icon: MapPin, title: 'Localização', content: 'São Paulo, SP', action: '#' },
   ];
 
   return (
@@ -87,10 +101,7 @@ const Contact = () => {
                     <info.icon className="text-sage" size={32} />
                   </div>
                   <h3 className="font-semibold text-sage mb-2">{info.title}</h3>
-                  <a 
-                    href={info.action}
-                    className="text-muted-foreground hover:text-sage transition-colors"
-                  >
+                  <a href={info.action} className="text-muted-foreground hover:text-sage transition-colors">
                     {info.content}
                   </a>
                 </CardContent>
@@ -114,6 +125,9 @@ const Contact = () => {
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  {/* Honeypot invisível */}
+                  <input type="text" name="company" className="hidden" tabIndex={-1} autoComplete="off" />
+
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                       <Label htmlFor="name">Nome completo</Label>
@@ -136,7 +150,7 @@ const Contact = () => {
                       />
                     </div>
                   </div>
-                  
+
                   <div>
                     <Label htmlFor="email">E-mail</Label>
                     <Input
@@ -148,7 +162,7 @@ const Contact = () => {
                       required
                     />
                   </div>
-                  
+
                   <div>
                     <Label htmlFor="subject">Assunto</Label>
                     <Input
@@ -156,10 +170,9 @@ const Contact = () => {
                       name="subject"
                       value={formData.subject}
                       onChange={handleInputChange}
-                      required
                     />
                   </div>
-                  
+
                   <div>
                     <Label htmlFor="message">Mensagem</Label>
                     <Textarea
@@ -171,10 +184,10 @@ const Contact = () => {
                       required
                     />
                   </div>
-                  
-                  <Button type="submit" size="lg" className="w-full">
+
+                  <Button type="submit" size="lg" className="w-full" disabled={submitting}>
                     <Send className="mr-2" size={20} />
-                    Enviar Mensagem
+                    {submitting ? 'Enviando...' : 'Enviar Mensagem'}
                   </Button>
                 </form>
               </CardContent>
@@ -214,27 +227,21 @@ const Contact = () => {
                     <div className="w-2 h-2 bg-sage rounded-full mt-2"></div>
                     <div>
                       <h4 className="font-medium">Presencial</h4>
-                      <p className="text-sm text-muted-foreground">
-                        Atendimento no consultório em São Paulo
-                      </p>
+                      <p className="text-sm text-muted-foreground">Atendimento no consultório em São Paulo</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-sage rounded-full mt-2"></div>
                     <div>
                       <h4 className="font-medium">Online</h4>
-                      <p className="text-sm text-muted-foreground">
-                        Videochamadas via plataforma segura
-                      </p>
+                      <p className="text-sm text-muted-foreground">Videochamadas via plataforma segura</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-sage rounded-full mt-2"></div>
                     <div>
                       <h4 className="font-medium">Emergências</h4>
-                      <p className="text-sm text-muted-foreground">
-                        Atendimento de urgência via WhatsApp
-                      </p>
+                      <p className="text-sm text-muted-foreground">Atendimento de urgência via WhatsApp</p>
                     </div>
                   </div>
                 </CardContent>
