@@ -5,46 +5,34 @@ import { Button } from '@/components/ui/button';
 const Feedback = () => {
   const testimonials = [
     {
-      name: "Maria Silva",
-      text: "Profissional excepcional que me ajudou a superar momentos difíceis com muito acolhimento. Suas técnicas e abordagem humanizada fizeram toda a diferença no meu processo de cura.",
+      name: "",
+      text: "O tratamento com a doutora Angélica transformou minha forma de enxergar o mundo e me ajudou a identificar a origem de problemas que eu não compreendia. Com profissionalismo e dedicação, ela me ofereceu ferramentas para refletir, encontrar soluções e até indicações de outros tratamentos que fizeram toda a diferença. É uma profissional excelente, que recomendo com certeza, pois agrega muito na vida de quem busca evolução e cuidado.",
       rating: 5,
-      date: "Janeiro 2024",
-      treatment: "Psicoterapia Individual"
+      date: "Janeiro 2024"
     },
     {
-      name: "João Santos",
-      text: "Terapia transformadora! Recomendo para quem busca autoconhecimento e crescimento pessoal. A psicóloga soube me guiar de forma muito profissional e empática.",
+      name: "",
+      text: "Durante o ano de 2021, vivi uma crise muito forte entre ansiedade e depressão, e nesse período foi fundamental o acompanhamento e as reflexões que tive com a psicóloga Angélica Carvalho. Com análises coerentes e certeiras, conseguimos mapear os focos e raízes que me levaram àquela situação. Sua ajuda profissional foi determinante para que eu pudesse dar a virada de chave que eu precisava na minha vida. Gratidão é a palavra pelo que fez em meu processo, e desejo muito sucesso na continuidade de seu trabalho ajudando outras pessoas.",
       rating: 5,
-      date: "Dezembro 2023",
-      treatment: "Acompanhamento Psicológico"
+      date: "Dezembro 2023"
     },
     {
-      name: "Ana Costa",
-      text: "Encontrei na terapia um espaço seguro para falar sobre minhas angústias. O acolhimento e a competência profissional me ajudaram muito a lidar com a ansiedade.",
+      name: "",
+      text: "A terapia psicológica com a Dra. Angélica foi de grande importância para mim durante a pandemia. Na ocasião, eu estava em casa o tempo todo, sem trabalhar, dedicada 100% aos filhos e à casa, o que gerou muita ansiedade e preocupação tanto com a questão financeira quanto com a saúde de todos. Sou muito grata pela ajuda da Dra. Angélica.",
       rating: 5,
-      date: "Novembro 2023",
-      treatment: "Terapia para Ansiedade"
+      date: "Novembro 2023"
     },
     {
-      name: "Carlos Oliveira",
-      text: "Excelente profissional! Me ajudou a compreender melhor meus relacionamentos e a desenvolver habilidades de comunicação. Muito obrigado pelo suporte.",
+      name: "",
+      text: "Quero registrar aqui que o seu trabalho é, primeiramente, de grande utilidade em nossas vidas, e acredito que todos deveriam ter acesso à sua profissão. Em relação a você, posso dizer que, para o meu momento, é uma pessoa e profissional muito clara, firme, inteligente e capaz, com um conteúdo e ferramentas que iluminam minha jornada e minha mente. Você enxerga, de forma respeitosa e adequada, as reais necessidades que me permeiam. Muito obrigada por participar com tanta qualidade da minha vida e dos meus desafios.",
       rating: 5,
-      date: "Outubro 2023",
-      treatment: "Terapia de Casal"
+      date: "Outubro 2023"
     },
     {
-      name: "Fernanda Lima",
-      text: "Processo terapêutico muito enriquecedor. A psicóloga tem uma escuta muito atenta e oferece ferramentas práticas que realmente funcionam no dia a dia.",
+      name: "",
+      text: "A Angélica me ajudou a organizar melhor meus pensamentos e sentimentos, a percebê-los e questioná-los. Com isso, passei a me entender melhor, focar no que precisava mudar e acompanhar a mudança acontecendo. Hoje posso dizer que, após a terapia com a Angélica, tenho mais conhecimento sobre mim mesma e sobre minhas emoções. Assim, consigo me ajudar mais, evoluir e ser mais feliz!",
       rating: 5,
-      date: "Setembro 2023",
-      treatment: "Psicoterapia Individual"
-    },
-    {
-      name: "Pedro Mendes",
-      text: "Recomendo de olhos fechados! Profissional competente, acolhedora e que realmente se importa com o bem-estar dos pacientes. Mudou minha perspectiva de vida.",
-      rating: 5,
-      date: "Agosto 2023",
-      treatment: "Acompanhamento Psicológico"
+      date: "Setembro 2023"
     }
   ];
 
@@ -58,31 +46,6 @@ const Feedback = () => {
           <h1 className="text-4xl md:text-5xl font-light text-sage mb-6">
             Depoimentos dos <span className="font-semibold">Meus Pacientes</span>
           </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-            Histórias reais de transformação e crescimento pessoal. 
-            Veja o que dizem as pessoas que confiaram em meu trabalho.
-          </p>
-          
-          {/* Stats */}
-          <div className="flex flex-col sm:flex-row gap-8 justify-center items-center mb-8">
-            <div className="text-center">
-              <div className="flex justify-center mb-2">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="text-yellow-400 fill-current" size={24} />
-                ))}
-              </div>
-              <div className="text-2xl font-bold text-sage">{averageRating.toFixed(1)}</div>
-              <div className="text-sm text-muted-foreground">Avaliação Média</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-sage">{testimonials.length}+</div>
-              <div className="text-sm text-muted-foreground">Depoimentos Recebidos</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-sage">98%</div>
-              <div className="text-sm text-muted-foreground">Satisfação dos Pacientes</div>
-            </div>
-          </div>
         </div>
       </section>
 
