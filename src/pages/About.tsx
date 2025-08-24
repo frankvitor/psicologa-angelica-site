@@ -1,15 +1,17 @@
 import { CheckCircle, Award, BookOpen, Heart } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import psychologistImage from '/angelica-frente-camera.jpeg';
 
 const About = () => {
   const qualifications = [
-    "Graduação em Psicologia - Universidade de São Paulo (USP)",
-    "Especialização em Terapia Cognitivo-Comportamental",
-    "Formação em Psicologia Positiva e Bem-estar",
-    "Certificação em Terapia de Casal e Família",
-    "Participação contínua em congressos e workshops"
+    "Graduação em Psicologia - Universidade Anhembi Morumbi",
+    "Especialização em Psicologia Hospitalar – Hospital Santa Paula",
+    "Pós-graduanda em Terapia Cognitivo Comportamental (TCC) e Psicologia Clínica Baseada em Evidências",
+    "Formação em Terapia Cognitivo Comportamental, Psicopatologia, Psicofarmacologia e Empreendedorismo",
+    "Experiência com atendimentos breves e focais em Telepsicologia",
+    "Participação contínua em empresas como palestrante"
   ];
 
   const approaches = [
@@ -155,45 +157,21 @@ const About = () => {
           </div>
         </div>
       </section>
-
-      {/* Approaches Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-light text-sage mb-12 text-center">
-              Abordagens <span className="font-semibold">Terapêuticas</span>
-            </h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {approaches.map((approach, index) => (
-                <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow">
-                  <CardContent className="p-8 text-center">
-                    <div className="w-16 h-16 bg-sage-lighter rounded-full flex items-center justify-center mx-auto mb-6">
-                      <approach.icon className="text-sage" size={32} />
-                    </div>
-                    <h3 className="text-xl font-semibold text-sage mb-4">{approach.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">{approach.description}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-sage text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-light mb-6">
-            Vamos Conversar?
+            Vamos agendar uma conversa gratuita?
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-            Estou aqui para ajudá-lo em sua jornada de autoconhecimento e bem-estar. 
-            Entre em contato para agendar nossa primeira conversa.
+            Entre em contato para agendarmos uma conversa breve e gratuita. Será um primeiro passo para entender suas necessidades, 
+            esclarecer dúvidas e, se fizer sentido para você, iniciarmos juntos um processo terapêutico acolhedor, ético e focado nos seus objetivos.
           </p>
-          <Button size="lg" className="bg-white text-sage hover:bg-beige">
-            Entrar em Contato
-          </Button>
+          <Link to="/contato">
+            <Button size="lg" className="bg-white text-sage hover:bg-beige">
+              Entrar em Contato
+            </Button>
+          </Link>
         </div>
       </section>
     </div>
