@@ -9,12 +9,12 @@ const Index = () => {
     {
       icon: Heart,
       title: "Psicoterapia Individual",
-      description: "Atendimento personalizado para adultos, com foco no autoconhecimento e bem-estar emocional."
+      description: "Atendimento personalizado para adultos, abordando os mais variados transtornos mentais (ansiedade, depressão, TOC, TEPT, insônia, entre outros) e desafios do dia a dia (procrastinação, perfeccionismo, dificuldades de comunicação, (assertividade), manutenção de hábitos saudáveis, entre outros)."
     },
     {
       icon: Users,
-      title: "Terapia de Casal",
-      description: "Fortalecimento de vínculos e resolução de conflitos para relacionamentos mais saudáveis."
+      title: "Palestras em Saúde Mental",
+      description: "Realizo palestras para empresas, escolas de futebol e igrejas, com foco em conscientização, estratégias práticas e promoção do equilíbrio emocional e qualidade de vida."
     },
     {
       icon: BookOpen,
@@ -81,12 +81,12 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-light text-sage mb-6">
-              Olá, sou sua <span className="font-semibold">Psicóloga</span>
+              Olá, sou <span className="font-semibold">Psicóloga</span>
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              Com ampla experiência clínica e uma abordagem humanizada, estou aqui para 
-              acompanhá-lo em sua jornada de autoconhecimento e crescimento pessoal. 
-              Acredito que cada pessoa tem o potencial para viver de forma mais plena e equilibrada.
+              Com ampla experiência clínica e foco em práticas baseadas em evidências, 
+              ofereço um espaço de reflexão e transformação. Acredito que cuidar da mente é
+              essencial para alcançar equilíbrio e qualidade de vida.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
               <div className="text-center">
