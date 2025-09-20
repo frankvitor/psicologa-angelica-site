@@ -90,27 +90,6 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Contact Info Cards */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-16">
-            {contactInfo.map((info, index) => (
-              <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow text-center">
-                <CardContent className="p-6">
-                  <div className="w-16 h-16 bg-sage-lighter rounded-full flex items-center justify-center mx-auto mb-4">
-                    <info.icon className="text-sage" size={32} />
-                  </div>
-                  <h3 className="font-semibold text-sage mb-2">{info.title}</h3>
-                  <a href={info.action} className="text-muted-foreground hover:text-sage transition-colors">
-                    {info.content}
-                  </a>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Contact Form & Info */}
       <section className="py-20 bg-accent">
         <div className="container mx-auto px-4">
@@ -223,13 +202,13 @@ const Contact = () => {
                   <CardTitle className="text-2xl text-sage">Modalidades de Atendimento</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <div className="flex items-start space-x-3">
+                  {/* <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-sage rounded-full mt-2"></div>
                     <div>
                       <h4 className="font-medium">Presencial</h4>
                       <p className="text-sm text-muted-foreground">Atendimento no consultório em São Paulo</p>
                     </div>
-                  </div>
+                  </div> */}
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-sage rounded-full mt-2"></div>
                     <div>
@@ -260,6 +239,27 @@ const Contact = () => {
                 </CardContent>
               </Card>
             </div>
+          </div>
+        </div>
+      </section>
+
+            {/* Contact Info Cards */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-16">
+            {contactInfo.map((info, index) => (
+              <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow text-center">
+                <CardContent className="p-6">
+                  <div className="w-16 h-16 bg-sage-lighter rounded-full flex items-center justify-center mx-auto mb-4">
+                    <info.icon className="text-sage" size={32} />
+                  </div>
+                  <h3 className="font-semibold text-sage mb-2">{info.title}</h3>
+                  <a href={info.action} className="text-muted-foreground hover:text-sage transition-colors">
+                    {info.content}
+                  </a>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
