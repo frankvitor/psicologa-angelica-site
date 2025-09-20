@@ -265,7 +265,7 @@ const Contact = () => {
       </section>
 
       {/* Map Section (Placeholder) */}
-      <section className="py-20">
+      {/* <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-light text-sage mb-8 text-center">
@@ -282,7 +282,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };
