@@ -71,7 +71,7 @@ const Contact = () => {
   const contactInfo = [
     { icon: Phone, title: 'Telefone', content: '(11) 91507-4650', action: 'tel:+5511915074650' },
     { icon: Mail, title: 'E-mail', content: 'psico.aacarvalho@outlook.com', action: 'mailto:psico.aacarvalho@outlook.com' },
-    { icon: MessageCircle, title: 'WhatsApp', content: 'Fale comigo agora', action: 'https://w.app/angelicacarvalho' },
+    { icon: MessageCircle, title: 'WhatsApp', content: 'Fale comigo agora', action: 'https://wa.me/5511915074650' },
     { icon: MapPin, title: 'Localização', content: 'São Paulo, SP', action: '#' },
   ];
 
